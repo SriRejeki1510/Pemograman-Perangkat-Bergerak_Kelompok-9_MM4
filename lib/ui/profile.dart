@@ -116,7 +116,12 @@ class ProfileScreen extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Implementasi logout
+                // Navigasi ke halaman login
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  rLogin,
+                  (Route<dynamic> route) => false,
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xffEC2425),
@@ -157,7 +162,7 @@ class ProfileScreen extends StatelessWidget {
             label: 'Profil',
           ),
         ],
-        currentIndex: 3,  // Set index sesuai dengan halaman saat ini
+        currentIndex: 3, // Set index sesuai dengan halaman saat ini
         selectedItemColor: Colors.red,
         unselectedItemColor: Colors.grey,
         onTap: (index) {
@@ -166,7 +171,7 @@ class ProfileScreen extends StatelessWidget {
               Navigator.pushNamed(context, rHome);
               break;
             case 1:
-              // Tambahkan logika untuk halaman genre
+              Navigator.pushNamed(context, rGenre);
               break;
             case 2:
               Navigator.pushNamed(context, rFavorite);

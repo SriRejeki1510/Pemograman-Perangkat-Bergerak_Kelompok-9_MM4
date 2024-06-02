@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:praktikum06/utils/routes.dart'; // Pastikan routes.dart diimpor
+import 'package:praktikum06/utils/routes.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -42,6 +42,13 @@ class HomeScreen extends StatelessWidget {
                 filled: true,
                 fillColor: Colors.grey[200],
               ),
+              onSubmitted: (query) {
+                Navigator.pushNamed(
+                  context,
+                  rSearch,
+                  arguments: query,
+                );
+              },
             ),
             SizedBox(height: 20),
             Row(
@@ -125,7 +132,7 @@ class HomeScreen extends StatelessWidget {
               Navigator.pushNamed(context, rHome);
               break;
             case 1:
-              // Tambahkan logika untuk halaman genre
+              Navigator.pushNamed(context, rGenre);
               break;
             case 2:
               Navigator.pushNamed(context, rFavorite);

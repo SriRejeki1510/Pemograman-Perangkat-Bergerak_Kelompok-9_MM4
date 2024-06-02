@@ -5,7 +5,8 @@ import 'package:praktikum06/ui/login.dart';
 import 'package:praktikum06/ui/notifikasi.dart';
 import 'package:praktikum06/ui/profile.dart';
 import 'package:praktikum06/ui/register.dart';
-
+import 'package:praktikum06/ui/search_screen.dart';
+import 'package:praktikum06/ui/genre_screen.dart';
 
 MaterialPageRoute _pageRoute(
     {required Widget body, required RouteSettings settings}) =>
@@ -33,6 +34,12 @@ Route? generateRoute(RouteSettings settings) {
     case rNotification:
       _route = _pageRoute(body: NotificationScreen(), settings: settings);
       break;
+    case rSearch:
+      _route = _pageRoute(body: SearchScreen(query: _args as String), settings: settings);
+      break;
+    case rGenre:
+      _route = _pageRoute(body: GenreScreen(), settings: settings);
+      break;
   }
   return _route;
 }
@@ -43,5 +50,7 @@ const String rHome = '/home';
 const String rProfile = '/profile';
 const String rFavorite = '/favorite';
 const String rNotification = '/notification';
+const String rSearch = '/search';
+const String rGenre = '/genre';
 
 final GlobalKey<NavigatorState> NAV_KEY = GlobalKey<NavigatorState>();
