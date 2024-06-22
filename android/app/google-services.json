@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "343754509186",
+    "project_id": "tubesppb-94f5f",
+    "storage_bucket": "tubesppb-94f5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343754509186:android:6017d0381cd3214d3add9b",
+        "android_client_info": {
+          "package_name": "com.example.praktikum06"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN-Q3bLxrkT-yE7H2bR9TtofyU4M5nilA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
